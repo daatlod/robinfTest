@@ -1,0 +1,61 @@
+.col__image{
+	height: 100vh;
+	overflow: hidden;
+	position:relative;
+}
+.logo{
+	left:40px;
+	position:absolute;
+	top: 40px;
+	transition: all 0.75s ease-out;
+	z-index: 3;
+
+	&.logo--hide{
+		opacity: 0;
+		top: -150px;
+	}
+
+	.link__logo{
+		display: inline-block;
+		max-width: 120px;
+		width:auto;
+		img{
+			height: auto;
+			margin: 0 auto;
+			width: 100%;
+		}
+	}
+}
+
+
+.col__content{
+	height: 100vh;
+}
+
+.bkg__pizza{
+	background-color:$blackBkg;
+	background-size: cover;
+	display: block;
+	height: 100%;
+	position: relative;
+	
+	width: 100%; 
+
+	
+
+	.pizza__image{
+		display: block;
+		height: auto; 
+		left: 50%;
+		position: absolute;  
+		top: 55%;  
+		transform: translate(-50%, -50%) rotate(0deg); 
+		transition: all 0.5s ease-out;
+		width: 95%;
+		z-index: 2;
+
+		&.pizza--in{
+			transform: translate(-50%, -50%)  rotate(270deg);
+		}
+	} 
+}

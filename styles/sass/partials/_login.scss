@@ -1,0 +1,102 @@
+.login__module{
+	text-align: center;
+
+	&_logo{
+		display: inline-block;
+		max-width: 220px;
+		width:auto;
+
+		@include lg{
+			max-width: 180px;
+		}
+		@include xxl{
+			max-width: 220px;
+		}
+
+		img{
+			height: auto;
+			margin: 0 auto;
+			width: 100%;
+		}
+	}
+	
+	&_welcome_text{
+		.welcome_title{
+			font-size: 3rem;
+			font-weight: 700;
+
+			@include lg{
+				font-size: 2.5rem;
+			}
+			@include xxl{
+				font-size: 3rem;
+			}
+		}
+		.welcome_lead{
+			font-size: 1.5rem;
+		}
+	}
+
+	&_form_singup{
+		.box__input{
+			border:1px solid $grayLine;
+			position: relative;
+			padding:1rem 0.75rem;
+
+			.input__field{
+				border:none transparent;
+				display: inline-block;
+				font-size:1.25rem; 
+				outline: none transparent;
+				width: calc(100% - 45px);
+			}
+			.input__icon{
+				display: inline-block;
+			}
+		}
+
+		.error__message{
+			color:$error;
+			font-weight: 700;
+		}
+		
+		.link__forgot{
+			color: $blackText;
+			font-family: 'Quicksand', sans-serif;
+			font-size:1.25rem;
+			font-weight: 700;
+			text-decoration: none; 
+		}
+		.btn__singup{
+			background: $yellow;
+			font-family: 'Quicksand', sans-serif;
+			font-size:1.375rem;
+			font-weight: 700;
+			padding: 1.75rem; 
+			width: 100%;
+
+			@include lg{
+				font-size:1.25rem;
+				padding: 1.25rem;
+			}
+			@include xxl{
+				font-size:1.375rem;
+				padding: 1.75rem;
+			}
+		}
+
+		&.error--form{
+			.box__input{
+				border:1px solid $error;
+
+				.input__field{
+					color:$error;
+
+					&::placeholder { 
+						color:$error;
+					}
+				}
+			}
+		}
+	}
+}
